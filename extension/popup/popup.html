@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Even Handed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-icon">⚖</span>
+      <span class="logo-text">Even Handed</span>
+    </div>
+    <p class="tagline">See how the story is told</p>
+  </header>
+
+  <div id="state-idle" class="state active">
+    <div class="idle-body">
+      <p>Navigate to a news article and click <strong>Analyze</strong> to compare framing across sources.</p>
+      <button id="btn-analyze" class="btn-primary">Analyze This Article</button>
+    </div>
+  </div>
+
+  <div id="state-loading" class="state">
+    <div class="loading-body">
+      <div class="spinner">
+        <span></span><span></span><span></span>
+      </div>
+      <p class="loading-text">Comparing sources…</p>
+    </div>
+  </div>
+
+  <div id="state-error" class="state">
+    <div class="error-body">
+      <span class="error-icon">!</span>
+      <p id="error-message">Something went wrong. Please try again.</p>
+      <button id="btn-retry" class="btn-secondary">Try Again</button>
+    </div>
+  </div>
+
+  <div id="state-result" class="state">
+
+    <section class="card card-overview">
+      <h2 class="card-label">Overview</h2>
+      <p id="overall-observation" class="overview-text"></p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-label">Tone</h2>
+      <ul id="tone-list" class="source-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2 class="card-label">Emphasis</h2>
+      <ul id="emphasis-list" class="source-list"></ul>
+    </section>
+
+    <section class="card card-signals">
+      <h2 class="card-label">Language Signals</h2>
+      <div class="signals-grid">
+        <div class="signal-group">
+          <span class="signal-label">Emotional</span>
+          <div id="emotional-tags" class="tag-row"></div>
+        </div>
+        <div class="signal-group">
+          <span class="signal-label">Speculative</span>
+          <div id="speculative-tags" class="tag-row"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card card-impact">
+      <h2 class="card-label">Reader Impact</h2>
+      <p id="reader-interpretation" class="impact-text"></p>
+    </section>
+
+    <button id="btn-reset" class="btn-secondary btn-reset">← Analyze Another</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
