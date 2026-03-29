@@ -1,6 +1,6 @@
 # ⚖️ Even Handed - The News Framing Engine
 
-![Even Handed Banner](https://antigravity-artifacts.s3.amazonaws.com/brain/053c3257-df31-416a-a771-8e365da5c71e/even_handed_banner_1774809556889.png)
+
 
 ## 📌 Project Overview
 **Even Handed** is an AI-powered news analysis platform designed to help readers understand how different news outlets frame the same real-world events. Instead of labeling articles as "biased" or "unbiased", our project focuses on the *how*—uncovering patterns in language, tone, and emphasis through advanced NLP and Large Language Models.
