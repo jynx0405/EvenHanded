@@ -42,18 +42,23 @@ graph TD
 ## 📂 Project Structure
 
 ```bash
-EvenHanded_Final/
-├── Website/
-│   └── even-handed-core/         # Core API & NLP Engine
-│       ├── api_gateway.py        # FastAPI Entry point
-│       ├── nlp_engine.py         # NLP Analytics module
-│       ├── llm_orchestrator.py   # LLM Generation layer
-│       └── client/               # Website Frontend (HTML/JS)
+Even Handed/
+├── Website/                      # Web Platform & Core Backend
+│   ├── api_gateway.py            # FastAPI Entry point
+│   ├── nlp_engine.py             # NLP Analytics module
+│   ├── llm_orchestrator.py       # LLM Generation layer
+│   ├── client/                   # Website Frontend (HTML/JS)
+│   ├── endpoints/                # API Route handlers
+│   ├── models/                   # Pydantic/Data schemas
+│   ├── services/                 # Core logic services (Scraping, Pipeline)
+│   ├── test_nlp_engine.py        # NLP Engine test suite
+│   └── test_llm_orchestrator.py  # LLM Orchestrator test suite
 ├── Extension/                    # Chrome Extension Components
 │   ├── backend/                  # Extension-specific FastAPI server
 │   ├── extension/                # Chrome extension frontend
+│   ├── prompt/                   # System prompts for Analysis
 │   └── requirements.txt          # Extension dependencies
-└── README.md                     # You are here!
+└── README.md                     # Project Documentation
 ```
 
 ---
@@ -66,8 +71,8 @@ EvenHanded_Final/
 
 ### 2. Core Backend Setup
 ```bash
-# Navigate to core folder
-cd Website/even-handed-core
+# Navigate to website folder
+cd Website
 
 # Install dependencies
 pip install -r requirement.txt
