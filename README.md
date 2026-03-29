@@ -116,5 +116,4 @@ uvicorn backend.main:app --reload
 
 ---
 
-## 📝 Authors
-*The "Even Handed" Team - Built for the ET Gen-AI Hackathon 2025.*
+
