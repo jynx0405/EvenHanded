@@ -1,0 +1,11 @@
+sentence-transformers
+scikit-learn
+spacy
+vaderSentiment
+fastapi
+uvicorn
+google-generativeai
+newspaper3k
+beautifulsoup4
+requests
+lxml_html_clean
